@@ -1,4 +1,4 @@
-# Criar serviço tipo Ingress Controller redirecionando entre 2 pods
+# Ingress Controller redirecionando entre 2 pods
 
 Vamos instalar o Ingress em nosso cluster (https://kubernetes.github.io/ingress-nginx/deploy/)
 
