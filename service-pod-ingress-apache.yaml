@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-pod-apache
+spec:
+  type: ClusterIP
+  selector:
+    app: docker-pod-apache
+  ports:
+    - port: 80

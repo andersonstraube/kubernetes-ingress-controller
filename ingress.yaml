@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-control
+  labels:
+    name: ingress-control
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+    - http:
+        paths:
+          - path: /nginx
+            pathType: Prefix
+            backend:
+              service:
+                name:  service-pod-nginx
+                port: 
+                  number: 80
+          - path: /apache
+            pathType: Prefix
+            backend:
+              service:
+                name:  service-pod-apache
+                port: 
+                  number: 80
