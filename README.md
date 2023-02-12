@@ -6,8 +6,6 @@ Vamos instalar o Ingress em nosso cluster (https://kubernetes.github.io/ingress-
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.5.1/deploy/static/provider/cloud/deploy.yaml
 ````
 
-Vamos aguardar o controller do ingress estar rodando (status=running), execute o comando abaixo
-
 Para visualizar os status, vamos rodar o comando abaixo:
 
 ````sh
@@ -16,7 +14,7 @@ kubectl get pods --namespace=ingress-nginx --watch
 
 Quando o Ingress estiver com o status `running`, vamos criar nossos dois pods:
 
-pod-ingress-nginx.yaml
+pod-ingress-nginx.yaml<br>
 pod-ingress-apache.yaml
 
 Aplique os pods no cluster:
@@ -28,7 +26,7 @@ kubectl apply -f pod-ingress-apache.yaml
 
 Com isso, vamos criar os serviços ClusterIP que os pods necessitam:
 
-service-pod-ingress-nginx.yaml
+service-pod-ingress-nginx.yaml<br>
 service-pod-ingress-apache.yaml
 
 Aplique os arquivos de criação dos serviços no cluster
